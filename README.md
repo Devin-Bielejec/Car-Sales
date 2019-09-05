@@ -22,14 +22,14 @@ In this project you will build out a application to show the nasa photo of the d
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ] Create a forked copy of this project.
-- [ ] Add your team lead as collaborator on Github.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Download project dependencies by running one of these two commands `yarn` or `npm install`
-- [ ] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
+- [X] Create a forked copy of this project.
+- [X] Add your team lead as collaborator on Github.
+- [X] Clone your OWN version of the repository in your terminal
+- [X] Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [X] Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [X] Create a new branch: git checkout -b `<firstName-lastName>`.
       Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ] Push commits: git push origin `<firstName-lastName>`.
+- [X] Push commits: git push origin `<firstName-lastName>`.
 
 Follow these steps for completing your project.
 
@@ -54,15 +54,32 @@ Follow these steps for completing your project.
 - Write out the steps you think you'll need to complete this project. It seems silly, but doing this with every project will help you grow into a better developer a lot faster.
 - Take note of the few comments throughout the app. They are there as little guides to nudge you in the right direction. You're welcome 😉
 
+App - initial state additonal price, car, store, features
+
+Header: your car (image, name, price)
+AddedFeatures: each feature you added (item)
+-addedFeature: has button to remove feature (need to make that component)
+AdditionalFeatures: 
+-additonalfeature: each additional feature (button lives here to remove)
+Total: same as total in header
+
+Steps:
+
+3) set up redux state store etc
+4) link components to redux state store
 **Step 2 - And... Action! 🎬**
 
 - Time to get your hands on your keyboard. Look at the first step you wrote down and start implementing!
 - As you work through setting up redux, you can do it however you'd like. This is the flow that works for me:
 
 ```text
-Set up "empty" reducer and initial state 👉 Set up store and Provider 👉
-Connect components 👉 Add events and event handlers in UI 👉 Build action creators 👉
-write the reducer logic for the actions 👉 Rinse and repeat
+Set up "empty" reducer and initial state 
+👉 Set up store and Provider 
+👉 Connect components 
+👉 Add events and event handlers in UI 
+👉 Build action creators 
+👉 write the reducer logic for the actions 
+👉 Rinse and repeat
 ```
 
 ## _MVP Requirements:_
