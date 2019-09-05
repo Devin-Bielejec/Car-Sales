@@ -15,3 +15,5 @@ const removeFeature = () => {
         carInfo
     }
 }
+
+export { ADD_FEATURE, REMOVE_FEATURE }
