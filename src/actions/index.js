@@ -14,5 +14,3 @@ export const removeFeature = (id) => {
         payload: id
     }
 }
-
-export { ADD_FEATURE, REMOVE_FEATURE }

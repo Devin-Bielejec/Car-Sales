@@ -18,6 +18,7 @@ const initialState = {
   };
 
 const reducer = (state = initialState, action) => {
+    console.log("made it to the reducer");
     switch (action.type) {
         case ADD_FEATURE:
             return {
@@ -28,7 +29,8 @@ const reducer = (state = initialState, action) => {
             }
         case REMOVE_FEATURE:
             return {
-                
+                ...state,
+                ...state.car.features.splice(state.store.indexOf(state.store.filter(item => item.id === action.payload)), 1)
             }
         default:
             return state;
