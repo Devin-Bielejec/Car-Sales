@@ -16,7 +16,7 @@ const AddedFeatures = props => {
             id={item.id} 
             name={item.name} 
             price={item.price}
-            removeFeature={props.removeFeature(item.id)} />
+            removeFeature={props.removeFeature} />
           ))}
         </ol>
       ) : (

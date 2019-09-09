@@ -22,22 +22,22 @@ const reducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_FEATURE:
             const itemToAdd = state.store.filter( item => item.id === action.payload)[0]
-            
+
             return {
                 ...state, 
                 car: {
                     ...state.car, 
-                    features: [...state.car.features, itemToAdd]
+                    features: state.car.features.includes(itemToAdd) ? [...state.car.features] : [...state.car.features, itemToAdd]
                 }
                 }
         case REMOVE_FEATURE:
+            const itemToRemove = state.store.filter( item => item.id === action.payload)[0]
             return {
                 ...state,
                 car: {
                     ...state.car,
-                    features: [...state.car.features].filter( item => )
+                    features: [...state.car.features].splice(state.car.features.indexOf(itemToRemove), 1)
                 }
-                ...state.car.features.splice(state.store.indexOf(state.store.filter(item => item.id === action.payload)), 1)
             }
         default:
             return state;
