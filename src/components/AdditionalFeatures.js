@@ -4,14 +4,15 @@ import { connect } from "react-redux";
 import { addFeature } from "../actions";
 
 
-const AdditionalFeatures = (props,) => {
+const AdditionalFeatures = (props) => {
+  console.log("AdditionalFeatures", props);
   return (
     <div className="content">
       <h4>Additional Features</h4>
       {props.store.length ? (
         <ol type="1">
           {props.store.map(item => (
-            <AdditionalFeature key={item.id} name={item.name} price={item.price} addFeature={(id)=>props.addFeature(id)}/>
+            <AdditionalFeature key={item.id} name={item.name} price={item.price} id={item.id} addFeature={props.addFeature}/>
           ))}
         </ol>
       ) : (
