@@ -24,9 +24,10 @@ const reducer = (state = initialState, action) => {
             const itemToAdd = state.store.filter( item => item.id === action.payload)[0]
 
             return {
-                ...state, 
+                ...state,
                 car: {
                     ...state.car, 
+                    price: state.car.price + itemToAdd.price, 
                     features: state.car.features.includes(itemToAdd) ? [...state.car.features] : [...state.car.features, itemToAdd]
                 }
                 }
@@ -40,6 +41,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 car: {
                     ...state.car,
+                    price: state.car.price - itemToRemove.price,
                     features: [...state.car.features].filter( item => item.id !== action.payload )
                 }
             }
