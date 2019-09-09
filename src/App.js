@@ -23,8 +23,8 @@ const App = () => {
         {/* <AddedFeatures/> */}
       </div>
       <div className="box">
-        {/* <AdditionalFeatures/>
-        <Total/> */}
+        <AdditionalFeatures/>
+        {/* <Total/> */}
       </div>
     </div>
   );
