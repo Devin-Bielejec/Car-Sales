@@ -31,12 +31,16 @@ const reducer = (state = initialState, action) => {
                 }
                 }
         case REMOVE_FEATURE:
-            const itemToRemove = state.store.filter( item => item.id === action.payload)[0]
+            const itemToRemove = state.store.filter( item => item.id === action.payload)[0];
+            console.log([1,2,3])
+            console.log(itemToRemove);
+            console.log([...state.car.features][0]);
+            console.log([...state.car.features].splice(state.car.features.indexOf(itemToRemove), 1))
             return {
                 ...state,
                 car: {
                     ...state.car,
-                    features: [...state.car.features].splice(state.car.features.indexOf(itemToRemove), 1)
+                    features: [...state.car.features].filter( item => item.id !== action.payload )
                 }
             }
         default:
